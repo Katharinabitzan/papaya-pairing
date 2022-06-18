@@ -1,6 +1,6 @@
 // brand-migration.js
 
-const { Sequelize } = require("sequelize/types");
+const { Sequelize } = require("sequelize");
 
 module.exports = {
     up: (queryInterface, Sequelize) =>
