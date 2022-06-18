@@ -13,19 +13,19 @@ module.exports = {
         },
         legal_identifier: {
             type: Sequelize.STRING,
-            allowNull: false,
+            allowNull: true,
         },
         name: {
             type: Sequelize.STRING,
-            allowNull: false,
+            allowNull: true,
         },
         frame_size: {
             type: Sequelize.INTEGER,
-            allowNull: false,
+            allowNull: true,
         },
         status: {
             type: Sequelize.INTEGER,
-            allowNull: false,
+            allowNull: true,
         },
         modelId: {
             type: Sequelize.INTEGER,
