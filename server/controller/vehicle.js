@@ -31,7 +31,7 @@ module.exports = {
     async update(req, res) {
         try {
             const vehicleCollection = await Vehicle.find({
-                id: req.params.vehicleId,
+                id: req.params.vehicle_id,
             })
             if (vehicleCollection) {
                 const updatedVehicle = await Vehicle.update({

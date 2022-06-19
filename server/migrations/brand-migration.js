@@ -4,7 +4,7 @@ const { Sequelize } = require("sequelize");
 
 module.exports = {
     up: (queryInterface, Sequelize) =>
-    queryInterface.createTable("Brands", {
+    queryInterface.createTable("brands", {
         id: {
             allowNull: false,
             autoIncrement: true,
@@ -24,5 +24,5 @@ module.exports = {
             type: Sequelize.DataTypes.DATE(6),
         },
     }),
-    down: (queryInterface /* , Sequelize */) => queryInterface.dropTable("Brands"),
+    down: (queryInterface /* , Sequelize */) => queryInterface.dropTable("brands"),
 }

@@ -4,7 +4,7 @@ const { Sequelize } = require("sequelize");
 
 module.exports = {
     up: (queryInterface, Sequelize) =>
-    queryInterface.createTable("Models", {
+    queryInterface.createTable("models", {
         id: {
             allowNull: false,
             autoIncrement: true,
@@ -15,13 +15,13 @@ module.exports = {
             type: Sequelize.STRING,
             allowNull: true,
         },
-        brandId: {
+        brand_id: {
             type: Sequelize.INTEGER,
             onDelete: "CASCADE",
             references: {
-                model: "Brands",
+                model: "brands",
                 key: "id",
-                as: "brandId",
+                as: "brand_id",
             },
         },
         created_at: {
@@ -33,5 +33,5 @@ module.exports = {
             type: Sequelize.DataTypes.DATE(6),
         },
     }),
-    down: (queryInterface /* , Sequelize */) => queryInterface.dropTable("Brands"),
+    down: (queryInterface /* , Sequelize */) => queryInterface.dropTable("models"),
 }

@@ -19,12 +19,12 @@ module.exports = {
     async getAllModelsOfBrand(req, res) {
         try {
             const brandCollection = await Brand.find({
-                id: req.params.brandId,
+                id: req.params.brand_id,
             });
 
             if (brandCollection) {
                 const modelCollection = await Model.find({
-                    brandId: req.params.brandId,
+                    brand_id: req.params.brand_id,
                 })
 
                 res.status(201).send(modelCollection)
@@ -42,7 +42,7 @@ module.exports = {
         try {
             const model = await Model.create({
                 name: req.body.name,
-                brandId: req.body.brandId,
+                brand_id: req.body.brand_id,
             });
             res.status(201).send(model)
 
@@ -55,7 +55,7 @@ module.exports = {
     async update(req, res) {
         try {
             const modelCollection = await Model.find({
-                id: req.params.modelId,
+                id: req.params.model_id,
             });
 
             if (modelCollection) {

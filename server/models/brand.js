@@ -1,13 +1,13 @@
 // BRAND schema
 
 module.exports = (sequelize, Datatypes) => {
-    let Brand = sequelize.define("Brand", {
+    let Brand = sequelize.define("brand", {
         name: Datatypes.STRING
     });
 
     Brand.associate = function(models) {
         Brand.hasMany(models.Model, {
-            foreignKey: "brandId",
+            foreignKey: "brand_id",
             as: "models"
         });
     };

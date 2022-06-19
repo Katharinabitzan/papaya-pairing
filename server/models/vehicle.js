@@ -1,7 +1,7 @@
 // VEHICLE schema
 
 module.exports = (sequelize, Datatypes) => {
-    let Vehicle = sequelize.define("Vehicle", {
+    let Vehicle = sequelize.define("vehicle", {
         legal_identifier: Datatypes.STRING,
         name: Datatypes.STRING,
         frame_size: Datatypes.INTEGER,
@@ -12,7 +12,7 @@ module.exports = (sequelize, Datatypes) => {
     Vehicle.associate = function(models) {
         Vehicle.belongsTo(models.Model, {
             onDelete: "CASCADE",
-            foreignKey: "modelId"
+            foreignKey: "model_id"
         });
     };
 

@@ -32,7 +32,7 @@ module.exports = {
     async update(req, res) {
         try {
             const brandCollection = await Brand.find({
-                id: req.params.brandId,
+                id: req.params.brand_id,
             })
             if (brandCollection) {
                 const updatedBrand = await Brand.update({

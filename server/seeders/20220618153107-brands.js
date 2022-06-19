@@ -2,10 +2,30 @@
 
 module.exports = {
   async up (queryInterface, Sequelize) {
-     await queryInterface.bulkInsert('Brands', [{ name: 'Honda' }, { name: 'Yamaha' }, { name: 'Zoomo' }, { name: 'nothng' }], {});
+     await queryInterface.bulkInsert('brands', [
+       { 
+       name: 'Honda', 
+       created_at: new Date(),
+       updated_at: new Date()
+      }, 
+      { 
+        name: 'Yamaha',
+        created_at: new Date(),
+        updated_at: new Date()
+      }, 
+      { 
+        name: 'Zoomo',
+        created_at: new Date(),
+        updated_at: new Date()
+      }, 
+      { 
+        name: 'nothng',
+        created_at: new Date(),
+        updated_at: new Date()
+       }], {});
   },
 
   async down (queryInterface, Sequelize) {
-     await queryInterface.bulkDelete('Brands', null, {});
+     await queryInterface.bulkDelete('brands', null, {});
   }
 };
